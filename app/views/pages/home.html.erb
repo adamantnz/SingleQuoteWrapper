@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="container">
+    <h1>Single Quote Wrapper</h1>
+  </div>
+</div>
+<div>
+<%= form_tag("/welcome", method:"get") do %>
+  <%= text_area_tag(:x, @input, rows: 20, cols: 30)%>
+  <br>
+  <%= submit_tag("Update") %>
+<% end %>
+<br>
+<%= Time.now %> <!-- datetime used for checking page is updating -->
+<br>
+<br>
+<%=
+  "SELECT * FROM <TableName>
+  WHERE <ColumnName> IN (#{@input3});"
+%>
+</div>
+
+<!-- http://localhost:3000/welcome?utf8=%E2%9C%93&x=YES+YES+YES&commit=Update -->
