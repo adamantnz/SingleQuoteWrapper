@@ -10,11 +10,12 @@
   <%= submit_tag("Update") %>
 <% end %>
 <br>
-<%= Time.now %> <!-- datetime used for checking page is updating -->
+<%= Time.now %>
+<!-- datetime used for checking page is updating -->
 <br>
 <br>
 <%=
   "SELECT * FROM <TableName>
-  WHERE <ColumnName> IN (#{@input3});"
+  WHERE <ColumnName> IN (#{@userOutput});"
 %>
 </div>
