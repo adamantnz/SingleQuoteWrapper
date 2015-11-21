@@ -5,17 +5,16 @@
 </div>
 <div>
 <%= form_tag("/home", method:"get") do %>
-  <%= text_area_tag(:x, @input, rows: 20, cols: 30)%>
+  <%= text_area_tag(:x, @input, rows: 20, cols: 30, autocomplete: "off", placeholder: "Insert some text", maxlength: 99999)%>
   <br>
   <%= submit_tag("Update") %>
 <% end %>
 <br>
-<!-- datetime used for checking page is updating -->
 <br>
   <code>
-    <%= Time.now %>
-    <br>
     <% if @userOutput !=nil -%>
+    /* <%= Time.now %> */
+    <br>
     <%="SELECT * FROM <TableName> WHERE <ColumnName> IN (#{@userOutput});"%>
       <% end %>
   </code>
