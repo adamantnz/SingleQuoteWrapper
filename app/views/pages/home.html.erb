@@ -4,7 +4,7 @@
   </div>
 </div>
 <div>
-<%= form_tag("/welcome", method:"get") do %>
+<%= form_tag("/home", method:"get") do %>
   <%= text_area_tag(:x, @input, rows: 20, cols: 30)%>
   <br>
   <%= submit_tag("Update") %>
@@ -15,9 +15,8 @@
   <code>
     <%= Time.now %>
     <br>
-    <%=
-      "SELECT * FROM <TableName>
-      WHERE <ColumnName> IN (#{@userOutput});"
-      %>
+    <% if @userOutput !=nil -%>
+    <%="SELECT * FROM <TableName> WHERE <ColumnName> IN (#{@userOutput});"%>
+      <% end %>
   </code>
 </div>
