@@ -1,9 +1,8 @@
 class PagesController < ApplicationController
   def home
     if params[:x].present?
-    @input = "#{params[:x]}"
-    @input = @input.upcase
-    # Convert user list to upper case
+    @input = "#{params[:x]}".upcase
+    # get the user input from form and convert to upper case
     @input2 = @input.split(" ").map {|a| "'#{a}',\n"}.join
     # splits user input by white space,
     # wraps each item in single quotes and puts next item on a new line

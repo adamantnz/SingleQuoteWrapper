@@ -5,9 +5,12 @@
 </div>
 <div>
 <%= form_tag("/home", method:"get") do %>
-  <%= text_area_tag(:x, @input, rows: 20, cols: 30, autocomplete: "off", placeholder: "Insert some text", maxlength: 99999)%>
+  <%= text_area_tag(:x, @input, rows: 20,
+      cols: 45, autocomplete: "off", placeholder:
+      "Paste a list of items to be formatted. For example:\ncats dogs cows lizards horses",
+      :required => true, maxlength: 2000)%>
   <br>
-  <%= submit_tag("Update") %>
+  <%= submit_tag("Go!") %>
 <% end %>
 <br>
 <br>
