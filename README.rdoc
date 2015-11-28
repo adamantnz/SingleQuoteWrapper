@@ -1,3 +1,3 @@
 == README
 
-This is a web-app utility which is used to help with formatting items within a SQL 'IN' clause. It works by identifying where there are white spaces, then wraps each item in the list in single quotes and puts a ',' between each item in the list. An example SQL string is then displayed back to the end user when the 'Update' button is clicked.
+This is a web-app utility which is used to help with formatting items within a SQL 'IN' clause. It works by identifying where there are white spaces, then wraps each item in the list in single quotes and puts a ',' between each item in the list. An example SQL string is then displayed back to the end user when the 'Go!' button is clicked.
